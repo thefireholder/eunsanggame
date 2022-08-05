@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html>
-<body>
-<iframe width="560" height="315"
-  src="https://www.youtube.com/embed/ZN-5OkhAxH0?autoplay=1"
-  title="YouTube video player" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write;
-  encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<head>
+<style>
+.myDiv {
+  background-color: black;
+  text-align: center;
+  color:white;
+  font-family: monospace;
+}
+.big {
+  padding-top:-100;
+  color: #f93860;
+  font-size: 120px;
+    padding:0 solid line;
+    margin:0;
+}
+</style>
+</head>
+<body class="myDiv">
+  <div class="myDiv">
+  <iframe width="560" height="315"
+    src="https://youtu.be/MK6p6c4Oo_A?autoplay=1"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+  <div>
+  <h1>Time is Ticking..! </h1>
+  <h2>Please Bring the mentioned item from "Manual: section 보고" </h2>
+
+  <h4>(Please Message 은상이게임 to let them know you've seen this message)<h4>
+  <h1>Address: 453 Los Cerritos Center E13, Cerritos, CA 90703</h1>
+  <div class="bigbox">
+    <h1 id="demo" class="big"></h1>
+  </div>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Aug 5, 2022 23:30:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var ss = distance % 1000
+    if (hours < 10) hours = hours+"0"
+    if (minutes < 10) minutes = minutes+"0"
+    if (ss < 10) ss = ss+"00"
+    else if (ss < 100) ss = ss+"0"
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = hours + ":"
+    + minutes + ":" + seconds + "."+ss;
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1);
+  </script>
 
 </body>
 </html>
