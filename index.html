@@ -54,11 +54,11 @@
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     var ss = distance % 1000
-    if (hours < 10) hours = hours+"0"
-    if (minutes < 10) minutes = minutes+"0"
-    if (seconds < 10) seconds = seconds+"0"
-    if (ss < 10) ss = ss+"00"
-    else if (ss < 100) ss = ss+"0"
+    if (hours < 10) hours = "0"+hours
+    if (minutes < 10) minutes = "0"+minutes
+    if (seconds < 10) seconds = "0"+seconds
+    if (ss < 10) ss = "00"+ss
+    else if (ss < 100) ss = "0"+ss
 
     // Display the result in the element with id="demo"
     document.getElementById("demo").innerHTML = hours + ":"
